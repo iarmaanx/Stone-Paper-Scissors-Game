@@ -1,13 +1,10 @@
-# Online Rock Paper Scissors Game
+# Rock Paper Scissors Game
 
-Welcome to the Online Rock Paper Scissors Game! Challenge your friends and enjoy this classic game online.
+Just choose 🪨📃✂️ and enjoy this classic game online. 
 
 ## Play Online
 
 Play the game online: [Online Rock Paper Scissors](#)
-
-## Screenshot
-![Rock-Paper-Scissors](screenshot.png)
 
 ## How to Play
 
@@ -15,6 +12,8 @@ Play the game online: [Online Rock Paper Scissors](#)
 2. Wait for computer to choose their move.
 3. See who wins!
 
+## Screenshot
+![Rock-Paper-Scissors](screenshot.png)
 
 ## Installation
 
