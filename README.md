@@ -7,7 +7,7 @@ Welcome to the Online Rock Paper Scissors Game! Challenge your friends and enjoy
 Play the game online: [Online Rock Paper Scissors](#)
 
 ## Screenshot
-[Game Screenshot](screenshot.png)
+[screenshot.png]
 
 ## How to Play
 
