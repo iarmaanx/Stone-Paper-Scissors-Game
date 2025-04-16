@@ -4,7 +4,7 @@ Just choose 🪨📃✂️ and enjoy this classic game online.
 
 ## Play Online
 
-Play the game online: [Online Rock Paper Scissors](#)
+Play the game online: [Online Rock Paper Scissors](https://rock-paper-scissors-game-a.netlify.app/)
 
 ## How to Play
 
