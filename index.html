@@ -4,30 +4,78 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Let's Play</title>
-    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+    .active-glow {
+        box-shadow: 0 0 20px 5px #ffffff;
+        transform: scale(1.1);
+        transition: all 0.2s ease;
+    }
+    </style>
+
 </head>
-<body>
-    <h1>Rock Paper Scissors Game</h1>
-    <div class="choices">
-        <div class="choice" id="rock">
-            <img src="/images/rock.png"></img>
+<body class="bg-gray-900 text-white flex flex-col items-center min-h-screen py-8">
+
+    <audio id="sound-win" src="https://actions.google.com/sounds/v1/cartoon/clang_and_wobble.ogg"></audio>
+    <audio id="sound-lose" src="https://actions.google.com/sounds/v1/cartoon/slide_whistle_to_drum_hit.ogg"></audio>
+    <audio id="sound-draw" src="https://actions.google.com/sounds/v1/cartoon/boing.ogg"></audio>
+    <audio id="sound-click" src="https://actions.google.com/sounds/v1/ui/click.ogg"></audio>
+
+
+    <h1 class="text-4xl font-bold mb-20 text-center">Rock Paper Scissors Game</h1>
+
+<button id="reset-btn" class="fixed top-4 right-4 px-6 py-2 bg-blue-600 rounded hover:bg-blue-700 transition text-white font-semibold z-50">
+  Reset Game
+</button>
+
+
+
+
+    <div class="choices flex flex-wrap justify-center gap-8 mb-10">
+    <div class="choice cursor-pointer w-32 h-32 md:w-40 md:h-40 bg-gray-800 rounded-full overflow-hidden hover:bg-gray-700 hover:scale-105 hover:shadow-lg transition duration-150 transform" id="rock">
+        <img src="/images/rock.png" alt="Rock" id="rock" loading="lazy" class="w-full h-full object-cover rounded-full hover:border-4 hover:border-white transition duration-150"/>
+    </div>
+    <div class="choice cursor-pointer w-32 h-32 md:w-40 md:h-40 bg-gray-800 rounded-full overflow-hidden hover:bg-gray-700 hover:scale-105 hover:shadow-lg transition duration-150 transform" id="paper">
+        <img src="/images/paper.png" alt="Paper" id="paper" loading="lazy" class="w-full h-full object-cover rounded-full hover:border-4 hover:border-white transition duration-150"/>
+    </div>
+    <div class="choice cursor-pointer w-32 h-32 md:w-40 md:h-40 bg-gray-800 rounded-full overflow-hidden hover:bg-gray-700 hover:scale-105 hover:shadow-lg transition duration-150 transform" id="scissors">
+        <img src="/images/scissors.png" alt="Scissors" id="scissors" loading="lazy" class="w-full h-full object-cover rounded-full hover:border-4 hover:border-white transition duration-150"/>
+    </div>
+    </div>
+
+
+
+    <div class="score-board flex gap-8 items-center mb-10 text-2xl">
+        <div class="flex flex-col items-center">
+            <p class="font-semibold">You:</p>
+            <p id="user-score" class="text-green-400">0</p>
         </div>
-        <div class="choice" id="paper">
-            <img src="/images/paper.png"></img>
-        </div>
-        <div class="choice" id="scissors">
-            <img src="/images/scissors.png"></img>
+        <div class="flex flex-col items-center">
+            <p class="font-semibold">Computer:</p>
+            <p id="comp-score" class="text-red-400">0</p>
         </div>
     </div>
-    <div class="score-board">
-        <p>You:</p>
-        <p id="user-score">0</p>
-        <p>Computer:</p>
-        <p id="comp-score">0</p>
+
+    <div class="message-container bg-gray-800 px-6 py-4 rounded-lg">
+        <p id="message" class="text-xl text-center">Choose your move</p>
     </div>
-    <div class="message-conatiner">
-        <p id="message">Choose your move</p>
-    </div>
+
+    <p class="text-gray-400 text-sm mt-8">
+  Press <span class="font-bold">1</span> for Rock, 
+  <span class="font-bold">2</span> for Paper, 
+  <span class="font-bold">3</span> for Scissors
+</p>
+
+
+
+    <!-- <div class="fixed bottom-4 right-4 bg-white text-red-600 text-small p-4 rounded shadow-md">
+        You're playing against the computer
+    </div> -->
+
+
+    <div id="history" class="fixed bottom-4 right-2 max-w-md w-full text-center text-sm text-gray-300"></div>
+
+
     <script src="script.js"></script>
 </body>
 </html>
